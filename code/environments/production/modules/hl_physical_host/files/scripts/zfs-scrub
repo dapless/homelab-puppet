@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Scrub all ZFS pools on the system
+
+# Get a list of all ZFS pools
+pools=$(zpool list -H -o name)
+
+# Check if any pools were found
+if [ -z "$pools" ]; then
+    echo "No ZFS pools found on this system."
+    exit 1
+fi
+
+# Loop through each pool and start a scrub
+for pool in $pools; do
+    echo "Starting scrub on pool: $pool"
+    zpool scrub "$pool"
+    if [ $? -eq 0 ]; then
+        echo "Scrub started successfully on $pool"
+    else
+        echo "Failed to start scrub on $pool"
+    fi
+done
+
+echo "Scrub initiated for all ZFS pools."

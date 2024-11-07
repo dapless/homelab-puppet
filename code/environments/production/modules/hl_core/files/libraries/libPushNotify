@@ -1,0 +1,20 @@
+push() {
+time=$(date +"%Y-%m-%d:%H:%M")
+title="$time $1"
+body=$2
+data=$(printf '{"type": "note", "title": "%s", "body": "%s"}' "$title" "$body")
+
+# Push bullet sucks and requires a subscription and is asking for a password for some reason so fuck it here's good ol simplepush back at it again
+
+# Remove any characters that aren't url friendly
+simpleTitle=$(echo $title | sed 's/[^A-Za-z0-9\-_~.]/ /g' | sed 's/\s\+/-/g')
+simpleBody=$(echo $body| sed 's/[^A-Za-z0-9\-_~.]/ /g' | sed 's/\s\+/-/g')
+
+# Send simplepush notification 
+curl -s "https://simplepu.sh/wX8DN9/$simpleTitle/$simpleBody" > /dev/null 2>&1
+
+# Send pushbullet notification
+#curl -s -u o.9GeIARXdz4lHFUP2A2Pj7aokTd3o4jmC : -X POST https://api.pushbullet.com/v2/pushes \
+#--header 'Content-Type: application/json' \
+#--data-binary "$data"  
+}

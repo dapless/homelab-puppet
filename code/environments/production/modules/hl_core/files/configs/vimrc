@@ -1,0 +1,17 @@
+set nocompatible
+filetype off
+set encoding=utf-8
+set ignorecase
+set hlsearch
+set wildmenu
+set showmatch
+set incsearch
+set cursorline
+set lbr
+set noautoindent
+set nocindent
+set nosmartindent
+set indentexpr=
+syntax on
+set tabstop=2 softtabstop=2 shiftwidth=2
+set expandtab

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Check status of pools and alert if errors or degradation is found 
+
+source /opt/libPushNotify
+
+status=$(zpool status -x)
+
+if [[ $status != 'all pools are healthy' ]];then
+  echo "zpool errors detected"
+  push "$HOSTNAME" "zpool errors detected"
+else
+  echo "$status"
+fi
