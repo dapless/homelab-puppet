@@ -105,3 +105,4 @@ export PATH="$PATH:/home/nas/Bin:/home/nas/.local/bin"
 # Shorten folder path in bash prompt to a reasonable length
 export PROMPT_DIRTRIM=2
 
+# Test comment
