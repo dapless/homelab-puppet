@@ -106,3 +106,5 @@ export PATH="$PATH:/home/nas/Bin:/home/nas/.local/bin"
 export PROMPT_DIRTRIM=2
 
 # Test comment
+
+# Testing branches branch A
