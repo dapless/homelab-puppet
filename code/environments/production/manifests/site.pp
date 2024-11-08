@@ -6,6 +6,10 @@ node 'phedia.lan' {
   include role::hl_core
   include role::physical_host
 }
+node 'zedia.lan' {
+  include role::hl_core
+  include role::kvm_host
+}
 node 'zad.lan' {
   include role::hl_core
   include role::physical_host
