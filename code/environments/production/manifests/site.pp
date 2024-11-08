@@ -1,6 +1,9 @@
 node 'default' {
   include role::hl_core
 }
+node 'lw-3067.nexcess.net' {
+  include role::client_work
+}
 
 node 'phedia.lan' {
   include role::hl_core
