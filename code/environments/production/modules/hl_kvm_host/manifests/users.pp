@@ -1,9 +1,15 @@
 class hl_kvm_host::users {
   user { 'hypervisor user':
   name => hypervisor,
+  groups => [libvirt, kvm],
   ensure => present,
   shell => '/bin/bash',
   purge_ssh_keys => true,
+  }
+  file { 'hypervisor home dir':
+  path => '/home/hypervisor',
+  owner => hypervisor,
+  ensure => directory,
   }
   file { 'hypervisor .ssh dir':
   path => '/home/hypervisor/.ssh',
@@ -18,3 +24,4 @@ class hl_kvm_host::users {
     user     => 'hypervisor',
   }
 }
+
