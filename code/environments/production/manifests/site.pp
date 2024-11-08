@@ -28,9 +28,14 @@ node 'archive2.lan' {
   include role::hl_core
   include role::physical_host
 }
+node 'test.lan' {
+  include role::hl_core
+  include role::kvm_host
+}
 
 # Notes
 # Reorganize so physical host is not a role but a profile included in the borg_host and kvm_host roles.
 # make borg and kvm roles!
 # change phedia hypervisor setup so it's like zedia's with it running as a non root user 
 # a dev role?
+# a role to configure client devices? such as laptops ssh config and maybe core stuff too

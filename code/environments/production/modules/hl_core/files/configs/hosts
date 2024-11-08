@@ -1,0 +1,22 @@
+127.0.0.1	localhost
+
+# Servers
+10.0.0.4 phedia.vpn
+10.0.0.3 zack.vpn
+10.0.0.21 think.vpn
+10.0.0.15 zad.vpn
+10.0.0.18 archive1.vpn
+10.0.0.19 archive2.vpn
+
+# VM's
+10.0.0.2 zedia.vpn
+10.0.0.12 cave.vpn
+10.0.0.22 puppet.vpn
+10.0.0.23 wiper.vpn
+10.0.0.25 test.vpn
+
+# Clients
+10.0.0.11 zink.vpn
+10.0.0.13 desktop.vpn
+10.0.0.16 worklaptop.vpn
+10.0.0.20 macbook.vpn

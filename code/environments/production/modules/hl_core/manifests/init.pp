@@ -4,6 +4,7 @@ class hl_core {
   include hl_core::admin_users
   include hl_core::security
   include hl_core::libraries
+  include hl_core::configs
 
  file { 'cron.daily':
   path => '/etc/cron.daily',
